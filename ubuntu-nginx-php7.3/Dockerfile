@@ -72,7 +72,7 @@ RUN sed -i -e "s/pm.start_servers = 2/pm.start_servers = 3/g" /etc/php/7.3/fpm/p
 RUN sed -i -e "s/pm.min_spare_servers = 1/pm.min_spare_servers = 2/g" /etc/php/7.3/fpm/pool.d/www.conf
 RUN sed -i -e "s/pm.max_spare_servers = 3/pm.max_spare_servers = 4/g" /etc/php/7.3/fpm/pool.d/www.conf
 RUN sed -i -e "s/pm.max_requests = 500/pm.max_requests = 200/g" /etc/php/7.3/fpm/pool.d/www.conf
-RUN sed -i -e "/listen\s*=\s*\/run\/php\/php7.3-fpm.sock/c\listen = 127.0.0.1:9100" /etc/php/7.3/fpm/pool.d/www.conf
+#RUN sed -i -e "/listen\s*=\s*\/run\/php\/php7.3-fpm.sock/c\listen = 127.0.0.1:9100" /etc/php/7.3/fpm/pool.d/www.conf
 RUN sed -i -e "/pid\s*=\s*\/run/c\pid = /run/php7.3-fpm.pid" /etc/php/7.3/fpm/php-fpm.conf
 
 #fix ownership of sock file
