@@ -44,6 +44,8 @@ RUN apt-get install -y php7.3-fpm \
     php-imagick \
     php-pear \
     php-gettext
+    
+RUN docker-php-ext-install sockets
 
 RUN apt-get install -y imagemagick \
     libruby \
