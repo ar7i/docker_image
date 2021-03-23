@@ -92,8 +92,7 @@ VOLUME ["/app"]
 # add test PHP file
 ADD src/index.php /app/src/public/index.php
 ADD src/index.php /app/src/public/info.php
-RUN chown -Rf www-data.www-data /app /var/php
-RUN chown -Rf www-data.www-data /var/www/html
+RUN chown -Rf www-data.www-data /app /run/php /var/www/html
 
 
 # Expose Ports
